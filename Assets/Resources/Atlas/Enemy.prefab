@@ -1,0 +1,800 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1349615598596082}
+  m_IsPrefabParent: 1
+--- !u!1 &1349615598596082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4792869446793668}
+  - component: {fileID: 114195911495772336}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4792869446793668
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349615598596082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114195911495772336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349615598596082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 73d6ca2e30303e344951411492bd2e90, type: 2}
+  mSprites:
+  - name: barnacle
+    x: 822
+    y: 13
+    width: 92
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 18
+    paddingTop: 24
+    paddingBottom: 0
+  - name: barnacle_attack
+    x: 589
+    y: 131
+    width: 92
+    height: 105
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 18
+    paddingTop: 23
+    paddingBottom: 0
+  - name: barnacle_dead
+    x: 407
+    y: 85
+    width: 92
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 18
+    paddingTop: 24
+    paddingBottom: 0
+  - name: bee
+    x: 513
+    y: 314
+    width: 102
+    height: 88
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 13
+    paddingTop: 22
+    paddingBottom: 18
+  - name: bee_dead
+    x: 616
+    y: 314
+    width: 102
+    height: 88
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 13
+    paddingTop: 22
+    paddingBottom: 18
+  - name: bee_move
+    x: 531
+    y: 237
+    width: 112
+    height: 76
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 8
+    paddingRight: 8
+    paddingTop: 28
+    paddingBottom: 24
+  - name: fishBlue
+    x: 915
+    y: 27
+    width: 82
+    height: 109
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 23
+    paddingRight: 23
+    paddingTop: 10
+    paddingBottom: 9
+  - name: fishBlue_dead
+    x: 430
+    y: 305
+    width: 82
+    height: 109
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 23
+    paddingRight: 23
+    paddingTop: 10
+    paddingBottom: 9
+  - name: fishBlue_fall
+    x: 719
+    y: 319
+    width: 82
+    height: 109
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 23
+    paddingRight: 23
+    paddingTop: 10
+    paddingBottom: 9
+  - name: fishGreen
+    x: 682
+    y: 231
+    width: 110
+    height: 82
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 23
+    paddingBottom: 23
+  - name: fishGreen_dead
+    x: 910
+    y: 372
+    width: 110
+    height: 82
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 23
+    paddingBottom: 23
+  - name: fishGreen_move
+    x: 725
+    y: 431
+    width: 103
+    height: 81
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 12
+    paddingTop: 24
+    paddingBottom: 23
+  - name: fishPink
+    x: 296
+    y: 17
+    width: 110
+    height: 82
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 23
+    paddingBottom: 23
+  - name: fishPink_dead
+    x: 420
+    y: 191
+    width: 110
+    height: 82
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 23
+    paddingBottom: 23
+  - name: fishPink_move
+    x: 296
+    y: 100
+    width: 103
+    height: 81
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 12
+    paddingTop: 24
+    paddingBottom: 23
+  - name: fly
+    x: 313
+    y: 190
+    width: 106
+    height: 83
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 11
+    paddingTop: 24
+    paddingBottom: 21
+  - name: fly_dead
+    x: 101
+    y: 150
+    width: 118
+    height: 71
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 5
+    paddingTop: 30
+    paddingBottom: 27
+  - name: fly_move
+    x: 618
+    y: 429
+    width: 106
+    height: 83
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 11
+    paddingTop: 24
+    paddingBottom: 21
+  - name: frog
+    x: 829
+    y: 137
+    width: 104
+    height: 71
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 12
+    paddingTop: 57
+    paddingBottom: 0
+  - name: frog_dead
+    x: 0
+    y: 265
+    width: 110
+    height: 97
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 31
+    paddingBottom: 0
+  - name: frog_move
+    x: 325
+    y: 415
+    width: 110
+    height: 97
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 31
+    paddingBottom: 0
+  - name: ladybug
+    x: 228
+    y: 317
+    width: 106
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 11
+    paddingTop: 64
+    paddingBottom: 0
+  - name: ladybug_fly
+    x: 0
+    y: 7
+    width: 105
+    height: 76
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 13
+    paddingTop: 52
+    paddingBottom: 0
+  - name: ladybug_move
+    x: 0
+    y: 84
+    width: 110
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 8
+    paddingTop: 64
+    paddingBottom: 0
+  - name: mouse
+    x: 802
+    y: 367
+    width: 107
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 11
+    paddingTop: 65
+    paddingBottom: 0
+  - name: mouse_dead
+    x: 793
+    y: 255
+    width: 107
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 11
+    paddingTop: 65
+    paddingBottom: 0
+  - name: mouse_move
+    x: 716
+    y: 54
+    width: 105
+    height: 63
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 11
+    paddingRight: 12
+    paddingTop: 65
+    paddingBottom: 0
+  - name: saw
+    x: 901
+    y: 209
+    width: 114
+    height: 114
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 7
+    paddingTop: 7
+    paddingBottom: 7
+  - name: saw_dead
+    x: 601
+    y: 16
+    width: 114
+    height: 114
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 7
+    paddingTop: 7
+    paddingBottom: 7
+  - name: saw_move
+    x: 716
+    y: 118
+    width: 112
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 8
+    paddingRight: 8
+    paddingTop: 8
+    paddingBottom: 8
+  - name: sawHalf
+    x: 829
+    y: 455
+    width: 114
+    height: 57
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 7
+    paddingTop: 71
+    paddingBottom: 0
+  - name: sawHalf_dead
+    x: 93
+    y: 455
+    width: 114
+    height: 57
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 7
+    paddingTop: 71
+    paddingBottom: 0
+  - name: sawHalf_move
+    x: 0
+    y: 363
+    width: 112
+    height: 56
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 8
+    paddingRight: 8
+    paddingTop: 72
+    paddingBottom: 0
+  - name: slimeBlock
+    x: 0
+    y: 420
+    width: 92
+    height: 92
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 18
+    paddingTop: 36
+    paddingBottom: 0
+  - name: slimeBlock_dead
+    x: 220
+    y: 182
+    width: 92
+    height: 92
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 18
+    paddingTop: 36
+    paddingBottom: 0
+  - name: slimeBlock_move
+    x: 195
+    y: 65
+    width: 100
+    height: 84
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 14
+    paddingRight: 14
+    paddingTop: 44
+    paddingBottom: 0
+  - name: slimeBlue
+    x: 106
+    y: 21
+    width: 88
+    height: 62
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 66
+    paddingBottom: 0
+  - name: slimeBlue_dead
+    x: 195
+    y: 2
+    width: 88
+    height: 62
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 66
+    paddingBottom: 0
+  - name: slimeBlue_hit
+    x: 117
+    y: 251
+    width: 102
+    height: 23
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 13
+    paddingTop: 105
+    paddingBottom: 0
+  - name: slimeBlue_move
+    x: 513
+    y: 403
+    width: 104
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 12
+    paddingTop: 74
+    paddingBottom: 0
+  - name: slimeGreen
+    x: 512
+    y: 2
+    width: 88
+    height: 62
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 66
+    paddingBottom: 0
+  - name: slimeGreen_dead
+    x: 512
+    y: 65
+    width: 88
+    height: 62
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 66
+    paddingBottom: 0
+  - name: slimeGreen_hit
+    x: 407
+    y: 6
+    width: 102
+    height: 23
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 13
+    paddingTop: 105
+    paddingBottom: 0
+  - name: slimeGreen_move
+    x: 436
+    y: 458
+    width: 104
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 12
+    paddingTop: 74
+    paddingBottom: 0
+  - name: slimePurple
+    x: 500
+    y: 128
+    width: 88
+    height: 62
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 66
+    paddingBottom: 0
+  - name: slimePurple_dead
+    x: 335
+    y: 352
+    width: 88
+    height: 62
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 66
+    paddingBottom: 0
+  - name: slimePurple_hit
+    x: 117
+    y: 227
+    width: 102
+    height: 23
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 13
+    paddingRight: 13
+    paddingTop: 105
+    paddingBottom: 0
+  - name: slimePurple_move
+    x: 407
+    y: 30
+    width: 104
+    height: 54
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 12
+    paddingRight: 12
+    paddingTop: 74
+    paddingBottom: 0
+  - name: snail
+    x: 0
+    y: 149
+    width: 100
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 14
+    paddingRight: 14
+    paddingTop: 56
+    paddingBottom: 0
+  - name: snail_move
+    x: 192
+    y: 382
+    width: 110
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 56
+    paddingBottom: 0
+  - name: snail_shell
+    x: 113
+    y: 390
+    width: 78
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 25
+    paddingRight: 25
+    paddingTop: 64
+    paddingBottom: 0
+  - name: wormGreen
+    x: 208
+    y: 470
+    width: 116
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 6
+    paddingTop: 86
+    paddingBottom: 0
+  - name: wormGreen_dead
+    x: 111
+    y: 275
+    width: 116
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 6
+    paddingTop: 86
+    paddingBottom: 0
+  - name: wormGreen_move
+    x: 111
+    y: 318
+    width: 116
+    height: 44
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 6
+    paddingTop: 84
+    paddingBottom: 0
+  - name: wormPink
+    x: 0
+    y: 222
+    width: 116
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 6
+    paddingTop: 86
+    paddingBottom: 0
+  - name: wormPink_dead
+    x: 313
+    y: 274
+    width: 116
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 6
+    paddingTop: 86
+    paddingBottom: 0
+  - name: wormPink_move
+    x: 802
+    y: 324
+    width: 116
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 6
+    paddingTop: 86
+    paddingBottom: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []
