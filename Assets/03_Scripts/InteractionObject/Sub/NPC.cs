@@ -26,6 +26,7 @@ public class NPC : InteractionObj
 		m_cNPCBox.SetInteraction(
 			(a_obj) => {
 				CSceneMng.Ins.textBox.SetData(m_refTable.strName, 1);
+				CSceneMng.Ins.textBox.SetVisible(true);
 			}
 		);
 	}

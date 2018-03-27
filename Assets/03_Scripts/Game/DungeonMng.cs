@@ -94,7 +94,7 @@ public class DungeonMng : MonoBehaviour, IFixedUpdate
 		CreateRoom();
 
 		// 방 입장
-		ChangeRoom(0, 0);
+		ChangeRoom(0); // 0, 0입장
 	}
 
 	public void FloorSetting(int a_nFloor)
@@ -148,30 +148,53 @@ public class DungeonMng : MonoBehaviour, IFixedUpdate
 		}
 	}
 
-	public void ChangeRoom(int a_nX, int a_nY)
+	public void ChangeRoom(int a_nKey)
 	{
-		if( m_refActiveRoom != null )
+		int nX = a_nKey % ST_DungeonInfo.nGap;
+		int nY = a_nKey / ST_DungeonInfo.nGap;
+
+		if (m_refActiveRoom != null)
 		{
 			m_refActiveRoom.SetVisible(false);
 		}
 
 		try
 		{
-			m_refActiveRoom = m_mapRoom[a_nX.GetCoordKey(a_nY)];
+			m_refActiveRoom = m_mapRoom[a_nKey];
+
+			m_nMapCoordX = nX;
+			m_nMapCoordY = nY;
 		}
 		catch
 		{
-			Debug.LogError(string.Format("x : {0}, y : {1}, Key : {2}", a_nX, a_nY, a_nX.GetCoordKey(a_nY)));
+			Debug.LogError(string.Format("x : {0}, y : {1}, Key : {2}", nX, nY, a_nKey));
 		}
-		
-		m_refActiveRoom.SetVisible(true);
 
+		m_refActiveRoom.SetVisible(true);
+		
 		GameMng.Ins.m_refPlayer.transform.localPosition = m_refActiveRoom.GetSpawnPos(eDir.Left);
 	}
 
 	public void ChangeRoom(eDir a_eDir)
 	{
-		// a_eDir
-		m_refActiveRoom = null;
+		int nKey = m_refActiveRoom.nCoordKye;
+		nKey += a_eDir.GetKeyGap();
+		
+		ChangeRoom(nKey);
+	}
+
+	public void ChangeRoom_withPortal(int a_nKey)
+	{
+		if( m_nMapCoordX.GetCoordKey(m_nMapCoordY) == a_nKey )
+		{
+			return;
+		}
+		
+		CSceneMng.Ins.FadeIn(
+			() =>
+			{
+				ChangeRoom(a_nKey);
+			}
+		);
 	}
 }

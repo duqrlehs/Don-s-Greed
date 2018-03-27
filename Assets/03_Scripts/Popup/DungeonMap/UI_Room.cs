@@ -67,6 +67,6 @@ public class UI_Room : MonoBehaviour
 	// 메세지 처리기
 	public void OnClickPortal()
 	{
-		// m_objMe.SetActive(true);
+		DungeonMng.Ins.ChangeRoom_withPortal(m_refData.nX.GetCoordKey(m_refData.nY));
 	}
 }

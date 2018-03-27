@@ -28,9 +28,10 @@ public class StatData
 	public int nCriDmg; //크리댐지
 
 	public int nAvoid; // 회피
-	public int nMove; // 이동속도
 	public int nDashAtk; // 대쉬공격시 추가댐지
 	public int nMaxJump;
+	public float fMove; // 이동속도
+	public float fJumpForce;
 
 	public virtual void Clear()
 	{
@@ -61,9 +62,11 @@ public class StatData
 		nCriDmg = 0;
 
 		nAvoid = 0;
-		nMove = 0;
 		nDashAtk = 0;
 		nMaxJump = 0;
+
+		fMove = 0;
+		fJumpForce = 0;
 	}
 
 	public void Copy(StatData a_refStat)
@@ -85,9 +88,11 @@ public class StatData
 		nCriDmg		= a_refStat.nCriDmg;
 
 		nAvoid		= a_refStat.nAvoid;
-		nMove		= a_refStat.nMove;
 		nDashAtk	= a_refStat.nDashAtk;
 		nMaxJump	= a_refStat.nMaxJump;
+
+		fMove		= a_refStat.fMove;
+		fJumpForce	= a_refStat.fJumpForce;
 	}
 
 	public void Add(StatData a_refStat)
@@ -109,9 +114,11 @@ public class StatData
 		nCriDmg		+= a_refStat.nCriDmg;
 
 		nAvoid		+= a_refStat.nAvoid;
-		nMove		+= a_refStat.nMove;
 		nDashAtk	+= a_refStat.nDashAtk;
 		nMaxJump	+= a_refStat.nMaxJump;
+
+		fMove		+= a_refStat.fMove;
+		fJumpForce	+= a_refStat.fJumpForce;
 	}
 }
 
@@ -143,7 +150,9 @@ public static class StatTable
 		st.nMaxHP = 100;
 		st.nMaxHungry = 100;
 		st.nDashCount = 2;
-		st.nMaxJump = 1;
+		st.nMaxJump = 2;
+		st.fMove = 5.0f;
+		st.fJumpForce = 250f;
 
 		m_mapStat.Add(st.nID, st);
 

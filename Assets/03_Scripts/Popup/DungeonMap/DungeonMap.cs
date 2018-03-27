@@ -23,9 +23,16 @@ public class DungeonMap : MonoBehaviour
 			gameObject.SetActive(a_bVisible);
 		}
 
-		if( a_bVisible == true )
+		if (a_bVisible == true)
 		{
 			Refresh();
+			GameMng.Ins.m_refPlayer.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+			GameMng.Ins.m_refPlayer.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+		}
+		else
+		{
+			GameMng.Ins.m_refPlayer.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+			GameMng.Ins.m_refPlayer.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
 		}
 	}
 
@@ -37,8 +44,7 @@ public class DungeonMap : MonoBehaviour
 		}
 
 		m_refData = a_refData;
-
-
+		
 		var node = m_refData.m_mapRoom.GetEnumerator();
 
 		if (m_liRoom.Count < m_refData.m_mapRoom.Count)
@@ -53,7 +59,7 @@ public class DungeonMap : MonoBehaviour
 		{
 			var stRoom = node.Current.Value;
 
-			m_liRoom[nIndex].SetData(stRoom, -500, -500);
+			m_liRoom[nIndex].SetData(stRoom, 0, 0);
 			m_liRoom[nIndex].gameObject.SetActive(true);
 
 			++nIndex;

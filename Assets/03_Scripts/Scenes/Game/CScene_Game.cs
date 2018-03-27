@@ -7,14 +7,19 @@ public class CScene_Game : CScene
 	#region INSPECTOR
 
 	public GameObject m_objPopupRoot;
-	public DungeonMap m_objMap;
+	public DungeonMap m_objMap; // 많이 보는 UI라 씬이 물고있음
 
 	#endregion
 
-	protected void Awake()
+	protected new void Awake()
 	{
 		base.Awake();
+
+		GameMng.Ins.EnterDungeon();
 		DungeonMng.Ins.EnterDungeon();
+
+		m_objMap.transform.parent = Camera.main.transform;
+		m_objMap.transform.localPosition = new Vector3(0, 0);
 	}
 
 	private void Start()
@@ -22,9 +27,14 @@ public class CScene_Game : CScene
 		m_objMap.SetData(DungeonMng.Ins.m_stDungeon);
 	}
 
+	public override void CloseAllPopup()
+	{
+		m_objMap.SetVisible(false);
+	}
+
 	private void FixedUpdate()
 	{
-		if( Input.GetButtonDown("Fire3") == true )
+		if( Input.GetButtonDown("Fire3") == true ) // 왼쪽 시프트
 		{
 			bool bVisible = m_objMap.bIsVisible;
 			bVisible = !bVisible;

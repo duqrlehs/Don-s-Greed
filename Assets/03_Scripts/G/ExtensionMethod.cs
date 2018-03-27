@@ -72,6 +72,24 @@ public static class ExtensionMethod
 		return i;
 	}
 
+	public static int GetKeyGap(this eDir a_eDir)
+	{
+		int a_nReturn = 0;
+
+		switch (a_eDir)
+		{
+			case eDir.Left:		{ a_nReturn = -1; } break;
+			case eDir.Right:	{ a_nReturn = 1; } break;
+
+			case eDir.Top:		{ a_nReturn = (ST_DungeonInfo.nGap); } break;
+			case eDir.Bottom:	{ a_nReturn = (-ST_DungeonInfo.nGap); } break;
+		}
+
+		if( a_nReturn == 0 ) { Debug.LogError("logic error"); }
+
+		return 0;
+	}
+	
 	public static bool AndOperation(this eDir a_eDir, eDir a_eCheck)
 	{
 		return ( (a_eDir & a_eCheck) == a_eCheck );

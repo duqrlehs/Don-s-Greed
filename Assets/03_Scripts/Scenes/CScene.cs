@@ -17,4 +17,6 @@ public class CScene : MonoBehaviour
 	{
 		CSceneMng.Ins.SetScene(this);
 	}
+
+	virtual public void CloseAllPopup() { }
 }

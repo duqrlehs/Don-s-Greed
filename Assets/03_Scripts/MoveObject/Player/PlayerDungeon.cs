@@ -14,8 +14,6 @@ public class PlayerDungeon : Player
 			m_fpOnTriggerEnter2D = OnTriggerEnter2D_InDungeon;
 			m_fpOnCollisionEnter2D = OnCollisionEnter2D_InDungeon;
 		}
-
-		maxSpeed = 3;
 	}
 
 	public void FixedUpdate_InDungeon()
@@ -36,7 +34,7 @@ public class PlayerDungeon : Player
 			if (m_refStat.nNowJumpCount < m_refStat.nMaxJump)
 			{
 				m_rb.velocity = new Vector2(m_rb.velocity.x, 0);
-				m_rb.AddForce(new Vector2(0, 200.0f));
+				m_rb.AddForce(new Vector2(0, m_refStat.fJumpForce));
 
 				// 				var pos = transform.localPosition;
 				// 				pos.y += 15.0f;
@@ -68,7 +66,7 @@ public class PlayerDungeon : Player
 			m_spr.flip = (m_bRight) ? UIBasicSprite.Flip.Nothing : UIBasicSprite.Flip.Horizontally;
 		}
 
-		m_rb.velocity = new Vector2(f * maxSpeed, m_rb.velocity.y);
+		m_rb.velocity = new Vector2(f * m_refStat.fMove, m_rb.velocity.y);
 	}
 
 	public void OnTriggerEnter2D_InDungeon(Collider2D collision)

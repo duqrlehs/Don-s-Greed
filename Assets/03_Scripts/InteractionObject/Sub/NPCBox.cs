@@ -15,17 +15,6 @@ public class NPCBox : InteractionObj
 	{
 		if(m_fpInteraction != null && a_obj != null)
 		{
-// 			Vector3 heading = this.transform.position - a_obj.transform.position;
-// 
-// 			float dist = heading.magnitude;
-// 			Vector3 dir = heading / dist;
-// 
-// 			if( ( dir.x < 0.1 && dir.x > -1.1 ) &&
-// 				( dir.y < 1.1 && dir.y > 0.4 ) )
-// 			{
-// 				m_fpInteraction(a_obj);
-// 			}
-
 			if( a_obj.transform.localPosition.y < transform.localPosition.y )
 			{
 				m_fpInteraction(a_obj);

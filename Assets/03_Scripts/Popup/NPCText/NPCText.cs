@@ -14,7 +14,7 @@ public class NPCText : MonoBehaviour
 	List<NPCTextData> m_liText = null;
 
 	int m_nCut = 0;
-	
+
 	public void SetData(string a_strName, int a_nNPCTextID)
 	{
 		m_lbName.text = a_strName;
@@ -28,6 +28,14 @@ public class NPCText : MonoBehaviour
 	void Refresh()
 	{
 		m_lbText.text = m_liText[m_nCut].strText;
+	}
+
+	public void SetVisible(bool a_bVisible)
+	{
+		if( gameObject.activeSelf != a_bVisible )
+		{
+			gameObject.SetActive(a_bVisible);
+		}
 	}
 
 	// 메세지 처리기

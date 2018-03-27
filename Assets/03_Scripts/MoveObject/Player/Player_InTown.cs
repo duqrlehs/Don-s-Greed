@@ -22,16 +22,18 @@ public partial class Player : MoveObject
 
 
 		}
-		else if (Input.GetButton("Jump") == true)
+		else if (Input.GetButtonDown("Jump") == true)
 		{
 			if( m_refStat.nNowJumpCount < m_refStat.nMaxJump )
 			{
 				m_rb.velocity = new Vector2(m_rb.velocity.x, 0);
-				m_rb.AddForce(new Vector2(0, 200.0f));
+				m_rb.AddForce(new Vector2(0, m_refStat.fJumpForce));
 
 				// 				var pos = transform.localPosition;
 				// 				pos.y += 15.0f;
 				// 				transform.localPosition = pos;
+
+				// ++m_refStat.nNowJumpCount;
 			}
 
 			// m_rb.isKinematic = true;
@@ -44,7 +46,9 @@ public partial class Player : MoveObject
 		bool bGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayers);
 		if( bGround == true )
 		{
-			this.m_refStat.nNowJumpCount = 0;
+			m_refStat.nNowJumpCount = 0;
+
+			Debug.Log("ground ground");
 		}
 
 		m_bGrounded = bGround;
@@ -59,7 +63,7 @@ public partial class Player : MoveObject
 			m_spr.flip = (m_bRight) ? UIBasicSprite.Flip.Nothing : UIBasicSprite.Flip.Horizontally;
 		}
 
-		m_rb.velocity = new Vector2(f * maxSpeed, m_rb.velocity.y);
+		m_rb.velocity = new Vector2(f * m_refStat.fMove, m_rb.velocity.y);
 	}
 
 	private void OnTriggerEnter2D_InTown(Collider2D collision)

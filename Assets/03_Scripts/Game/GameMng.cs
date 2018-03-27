@@ -52,6 +52,21 @@ public class GameMng : MonoBehaviour
 
 	public void EnterTown()
 	{
+		SetDefaultPlayerStat();
+	}
+
+	public void EnterDungeon()
+	{
+		SetDefaultPlayerStat();
+	}
+	
+	public void SetPlayer(Player a_refPlayer)
+	{
+		m_refPlayer = a_refPlayer;
+	}
+
+	public void SetDefaultPlayerStat()
+	{
 		m_nEquipSlot = 0;
 		m_PlayerStat.Clear();
 
@@ -60,22 +75,12 @@ public class GameMng : MonoBehaviour
 		m_liInvenItems.AddLast(StatTable.nDefaultWaeponID);
 
 		// 기본스탯 세팅
-		m_PlayerStat.Copy(((int)eStatCategory.Hero+1).GetStatData());
+		m_PlayerStat.Copy(((int)eStatCategory.Hero + 1).GetStatData());
 
 		// 스탯 - 이큅추가
 		m_stEquip.SetEquip(StatTable.nDefaultWaeponID, 0);
 
 		// 스탯 적용
 		m_refPlayer.SetStat(m_PlayerStat, m_stEquip.GetStat(m_nEquipSlot));
-	}
-
-	public void EnterDungeon()
-	{
-		DungeonMng.Ins.EnterDungeon();
-	}
-	
-	public void SetPlayer(Player a_refPlayer)
-	{
-		m_refPlayer = a_refPlayer;
 	}
 }

@@ -17,18 +17,15 @@ public partial class Player : MoveObject
 	protected bool				m_bRight;
 
 	[System.NonSerialized]
-	protected bool m_bJumping;
+	protected bool				m_bJumping;
 
 	[System.NonSerialized]
-	protected bool m_bGrounded;
-
-	public float		jumpForce = 0.001f;
-	public float		maxSpeed = 0.0001f;
+	protected bool				m_bGrounded;
 
 	public Transform	groundCheck;
 	public LayerMask	groundLayers;
 
-	public float groundCheckRadius = 0.2f;
+	public float groundCheckRadius = 0.1f;
 	
 	protected System.Action m_fpFixedUpdate = null;
 	protected System.Action<Collider2D> m_fpOnTriggerEnter2D = null;
@@ -48,6 +45,8 @@ public partial class Player : MoveObject
 	void Awake()
 	{
 		GameMng.Ins.SetPlayer(this);
+
+		Camera.main.gameObject.transform.parent = this.gameObject.transform;
 	}
 
 	void Start()
@@ -57,7 +56,7 @@ public partial class Player : MoveObject
 			m_fpFixedUpdate = FixedUpdate_InTown;
 			m_fpOnTriggerEnter2D = OnTriggerEnter2D_InTown;
 			m_fpOnCollisionEnter2D = OnCollisionEnter2D_InTown;
-		}
+		}	
 	}
 
 	public void FixedUpdate()

@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4903982}
   - component: {fileID: 4903981}
   - component: {fileID: 4903980}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (31)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 16253493}
   - component: {fileID: 16253495}
   - component: {fileID: 16253494}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (30)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 47510589}
   - component: {fileID: 47510591}
   - component: {fileID: 47510590}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (22)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 58337694}
   - component: {fileID: 58337696}
   - component: {fileID: 58337695}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (6)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 63634040}
   - component: {fileID: 63634042}
   - component: {fileID: 63634041}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (8)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -871,7 +871,7 @@ GameObject:
   - component: {fileID: 132865579}
   - component: {fileID: 132865581}
   - component: {fileID: 132865580}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (17)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 152833779}
   - component: {fileID: 152833781}
   - component: {fileID: 152833780}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (24)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -1131,7 +1131,7 @@ GameObject:
   - component: {fileID: 159910471}
   - component: {fileID: 159910473}
   - component: {fileID: 159910472}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (3)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -1289,7 +1289,7 @@ GameObject:
   - component: {fileID: 179976521}
   - component: {fileID: 179976523}
   - component: {fileID: 179976522}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (14)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -1419,7 +1419,7 @@ GameObject:
   - component: {fileID: 288018213}
   - component: {fileID: 288018215}
   - component: {fileID: 288018214}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (11)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -1549,7 +1549,7 @@ GameObject:
   - component: {fileID: 298360922}
   - component: {fileID: 298360924}
   - component: {fileID: 298360923}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (21)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -1824,7 +1824,7 @@ GameObject:
   - component: {fileID: 366005220}
   - component: {fileID: 366005222}
   - component: {fileID: 366005221}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (25)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -2236,6 +2236,7 @@ Transform:
   m_LocalScale: {x: 0.0027777778, y: 0.0027777778, z: 0.0027777778}
   m_Children:
   - {fileID: 1507261528}
+  - {fileID: 1369471313}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2264,7 +2265,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 629924923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.99994, y: 93, z: 0}
+  m_LocalPosition: {x: 126, y: 55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 100457676}
@@ -2406,7 +2407,7 @@ GameObject:
   - component: {fileID: 714634627}
   - component: {fileID: 714634626}
   - component: {fileID: 714634625}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (32)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -2536,7 +2537,7 @@ GameObject:
   - component: {fileID: 744771757}
   - component: {fileID: 744771759}
   - component: {fileID: 744771758}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (23)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -2666,7 +2667,7 @@ GameObject:
   - component: {fileID: 762516271}
   - component: {fileID: 762516273}
   - component: {fileID: 762516272}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (16)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -3181,7 +3182,7 @@ GameObject:
   - component: {fileID: 933443509}
   - component: {fileID: 933443511}
   - component: {fileID: 933443510}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (26)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -3344,7 +3345,7 @@ GameObject:
   - component: {fileID: 1041629900}
   - component: {fileID: 1041629902}
   - component: {fileID: 1041629901}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (4)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -3599,7 +3600,7 @@ GameObject:
   - component: {fileID: 1155428093}
   - component: {fileID: 1155428095}
   - component: {fileID: 1155428094}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (7)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -3868,7 +3869,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 1024
-  groundCheckRadius: 0.2
+  groundCheckRadius: 0.1
 --- !u!1 &1241627712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3880,7 +3881,7 @@ GameObject:
   - component: {fileID: 1241627714}
   - component: {fileID: 1241627716}
   - component: {fileID: 1241627715}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (10)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -4155,7 +4156,7 @@ GameObject:
   - component: {fileID: 1284361120}
   - component: {fileID: 1284361122}
   - component: {fileID: 1284361121}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (29)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -4303,8 +4304,8 @@ Transform:
   - {fileID: 782391200}
   - {fileID: 701794132}
   - {fileID: 389877039}
-  m_Father: {fileID: 1507261528}
-  m_RootOrder: 0
+  m_Father: {fileID: 629041517}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1369471314
 MonoBehaviour:
@@ -4331,7 +4332,7 @@ GameObject:
   - component: {fileID: 1408630385}
   - component: {fileID: 1408630387}
   - component: {fileID: 1408630386}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (18)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -4461,7 +4462,7 @@ GameObject:
   - component: {fileID: 1467819057}
   - component: {fileID: 1467819059}
   - component: {fileID: 1467819058}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (13)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -4592,7 +4593,7 @@ GameObject:
   - component: {fileID: 1507261529}
   m_Layer: 11
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4603,11 +4604,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507261527}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.400024, y: -249.20001, z: 178}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1369471313}
+  m_Children: []
   m_Father: {fileID: 629041517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4700,7 +4700,7 @@ GameObject:
   - component: {fileID: 1542251555}
   - component: {fileID: 1542251557}
   - component: {fileID: 1542251556}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (2)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -4975,7 +4975,7 @@ GameObject:
   - component: {fileID: 1654833048}
   - component: {fileID: 1654833050}
   - component: {fileID: 1654833049}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (12)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -5166,7 +5166,7 @@ GameObject:
   - component: {fileID: 1792761007}
   - component: {fileID: 1792761009}
   - component: {fileID: 1792761008}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (5)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -5296,7 +5296,7 @@ GameObject:
   - component: {fileID: 1801647559}
   - component: {fileID: 1801647561}
   - component: {fileID: 1801647560}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (1)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -5571,7 +5571,7 @@ GameObject:
   - component: {fileID: 1944971200}
   - component: {fileID: 1944971202}
   - component: {fileID: 1944971201}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (28)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -5701,7 +5701,7 @@ GameObject:
   - component: {fileID: 1961080181}
   - component: {fileID: 1961080183}
   - component: {fileID: 1961080182}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (9)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -5831,7 +5831,7 @@ GameObject:
   - component: {fileID: 1982183870}
   - component: {fileID: 1982183872}
   - component: {fileID: 1982183871}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (19)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -5961,7 +5961,7 @@ GameObject:
   - component: {fileID: 1983952744}
   - component: {fileID: 1983952746}
   - component: {fileID: 1983952745}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (15)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -6091,7 +6091,7 @@ GameObject:
   - component: {fileID: 1997167357}
   - component: {fileID: 1997167359}
   - component: {fileID: 1997167358}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (27)
   m_TagString: Down
   m_Icon: {fileID: 0}
@@ -6221,7 +6221,7 @@ GameObject:
   - component: {fileID: 2018139928}
   - component: {fileID: 2018139930}
   - component: {fileID: 2018139929}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Sprite (20)
   m_TagString: Down
   m_Icon: {fileID: 0}

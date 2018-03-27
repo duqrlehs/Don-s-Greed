@@ -54,7 +54,7 @@ public class CSceneMng : MonoBehaviour
 		{
 			if (m_objText == null)
 			{
-				var newObj = gameObject.Instantiate_asChild("NPCText");
+				var newObj = Camera.main.gameObject.Instantiate_asChild("NPCText");
 				m_objText = newObj.GetComponent<NPCText>();
 			}
 
@@ -76,6 +76,13 @@ public class CSceneMng : MonoBehaviour
 		Transition.LoadLevel(a_eScene.ToDesc(), 0.5f, Color.black);
 	}
 
+	public void FadeIn(System.Action a_fpCallback)
+	{
+		m_refScene.CloseAllPopup();
+
+		Transition.FadeAction(0.5f, Color.black, a_fpCallback);
+	}
+
 	public void SetScene(CScene a_refScene)
 	{
 		m_refScene = a_refScene;
@@ -88,8 +95,7 @@ public class CSceneMng : MonoBehaviour
 
 	public void ResetPopup()
 	{
-		// 삭제는 매우 비용이 쎕니다.
-		// 씬 전환이 확실하기 때문에 그 때만 지웁니다.
-		if( m_objText != null ) { Destroy(m_objText); m_objText = null; }
+		// 삭제는 매우 비용이 쎕니다.// 씬 전환이 보통 삭제관련 넣기 가장 좋은 때 입니다. 그 때만 지웁니다.
+		if ( m_objText != null ) { Destroy(m_objText); m_objText = null; }
 	}
 }

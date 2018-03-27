@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 4389088429447752}
   - component: {fileID: 114055177446047546}
   - component: {fileID: 61396960491008426}
+  - component: {fileID: 114399020022097038}
   m_Layer: 11
   m_Name: Portal
   m_TagString: Untagged
@@ -475,7 +476,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -918,6 +919,34 @@ MonoBehaviour:
   mAtlas: {fileID: 114927434072926234, guid: 5ad34c6b49e413b4ca87518b0cc038f9, type: 2}
   mSpriteName: Circle-Small
   mFillCenter: 1
+--- !u!114 &114399020022097038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1357703587072254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e862f287df53bb64db191162f851a296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHoverOver: []
+  onHoverOut: []
+  onPress: []
+  onRelease: []
+  onSelect: []
+  onDeselect: []
+  onClick:
+  - mTarget: {fileID: 114196137660403796}
+    mMethodName: OnClickPortal
+    mParameters: []
+    oneShot: 0
+  onDoubleClick: []
+  onDragStart: []
+  onDragEnd: []
+  onDragOver: []
+  onDragOut: []
+  onDrag: []
 --- !u!114 &114407111626529266
 MonoBehaviour:
   m_ObjectHideFlags: 1

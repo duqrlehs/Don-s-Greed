@@ -30,17 +30,10 @@ public class RoomInfo : MonoBehaviour, IFixedUpdate
 	public void SetData(ST_Room a_stData)
 	{
 		m_stData = a_stData;
-		CreateRoom();
 		Refresh();
 	}
 
-	void CreateRoom()
-	{
-		// 이 아이디로 저장된 맵을 로딩 : 하는게 좋지만 일단 현재 구현은 프리팹으로 때우는거라 :D
-		// m_stData.nRoomID;
-	}
-
-	public void OnDrawGizmos()
+	public void OnDrawGizmos() // 플레이어 스폰위치 씬뷰에서 보이기
 	{
 		Gizmos.color = Color.red;
 
@@ -58,7 +51,14 @@ public class RoomInfo : MonoBehaviour, IFixedUpdate
 		for (int i = 0; i < nDIR_COUNT; ++i)
 		{
 			eCheck = (eDir)nVal;
-			m_arrBlockWallRoot[eCheck.ToIndex()].SetActive(!m_stData.eOpenDir.AndOperation(eCheck));
+
+			int nIndex = eCheck.ToIndex();
+
+			// 이벤트 벽 : 특정 트리거 발동시 막아두는 벽
+			m_arrEventWallRoot[nIndex].SetActive(false);
+
+			// 막는 벽
+			m_arrBlockWallRoot[nIndex].SetActive(!m_stData.eOpenDir.AndOperation(eCheck));
 
 			nVal >>= 1;
 		}
