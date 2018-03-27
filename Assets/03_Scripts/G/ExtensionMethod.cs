@@ -87,7 +87,7 @@ public static class ExtensionMethod
 
 		if( a_nReturn == 0 ) { Debug.LogError("logic error"); }
 
-		return 0;
+		return a_nReturn;
 	}
 	
 	public static bool AndOperation(this eDir a_eDir, eDir a_eCheck)

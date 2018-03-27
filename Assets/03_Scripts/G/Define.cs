@@ -300,7 +300,12 @@ namespace Global_Define
 				}
 
 				room.eExistNPC = a_liNPC[i];
-				room.bPortal |= (UnityEngine.Random.Range(0, 1.0f) > 0.7f);
+				
+				// 식당, 무기상인한테는 무조건 포탈 존재
+				if(room.eExistNPC == eNPC.DungeonDining || room.eExistNPC == eNPC.DungeonWaepon)
+				{
+					room.bPortal |= true;
+				}
 			} 
 		}
 
@@ -313,8 +318,6 @@ namespace Global_Define
 			m_nRoomCount = 0;
 			m_nStartRoomKey = 0;
 		}
-
-		
 	}
 
 	static public class RoomMaker
@@ -373,7 +376,8 @@ namespace Global_Define
 			}
 
 			// 왼쪽
-			if( (UnityEngine.Random.Range(0, 1.0f) > 0.5f) )
+			if( (a_stRoom.nX > 0) &&
+				(UnityEngine.Random.Range(0, 1.0f) > 0.5f) )
 			{
 				var room = AddRoom(a_stRoom.nX - 1, a_stRoom.nY);
 
@@ -397,7 +401,8 @@ namespace Global_Define
 			}
 
 			// 아래
-			if ((UnityEngine.Random.Range(0, 1.0f) > 0.5f))
+			if( (a_stRoom.nY > 0) &&
+				(UnityEngine.Random.Range(0, 1.0f) > 0.5f) )
 			{
 				var room = AddRoom(a_stRoom.nX, a_stRoom.nY - 1);
 
@@ -425,6 +430,9 @@ namespace Global_Define
 			stReturn = new ST_Room();
 			stReturn.nX = a_nX;
 			stReturn.nY = a_nY;
+
+			// 랜덤하게 포탈 세팅. 좌표가 아닌 방의 속성을 정하는 것이기에 여기보단 위쪽에서 하는게 맞지만 반복문이 여기서 돌아 걍 여기서함
+			stReturn.bPortal = (UnityEngine.Random.Range(0, 1.0f) > 0.7f);
 
 			m_refLiCoord.Add(nKey);
 			m_refMapRoom.Add(nKey, stReturn); 

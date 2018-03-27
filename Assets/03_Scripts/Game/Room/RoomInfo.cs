@@ -27,6 +27,19 @@ public class RoomInfo : MonoBehaviour, IFixedUpdate
 	
 	ST_Room m_stData = null;
 
+	public void SetVisible(bool a_bVisible)
+	{
+		if(gameObject.activeSelf != a_bVisible)
+		{
+			gameObject.SetActive(a_bVisible);
+		}
+
+		if( a_bVisible == true )
+		{
+			Refresh();
+		}
+	}
+
 	public void SetData(ST_Room a_stData)
 	{
 		m_stData = a_stData;
@@ -45,7 +58,7 @@ public class RoomInfo : MonoBehaviour, IFixedUpdate
 
 	public void Refresh()
 	{
-		int nVal = (int)eDir.Top;
+		int nVal = (int)eDir.Left;
 		eDir eCheck = eDir.None;
 
 		for (int i = 0; i < nDIR_COUNT; ++i)
@@ -60,7 +73,7 @@ public class RoomInfo : MonoBehaviour, IFixedUpdate
 			// 막는 벽
 			m_arrBlockWallRoot[nIndex].SetActive(!m_stData.eOpenDir.AndOperation(eCheck));
 
-			nVal >>= 1;
+			nVal <<= 1;
 		}
 	}
 	

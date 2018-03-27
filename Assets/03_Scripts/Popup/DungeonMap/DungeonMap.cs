@@ -27,7 +27,10 @@ public class DungeonMap : MonoBehaviour
 		{
 			Refresh();
 			GameMng.Ins.m_refPlayer.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-			GameMng.Ins.m_refPlayer.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+			var rb = GameMng.Ins.m_refPlayer.gameObject.GetComponent<Rigidbody2D>();
+
+			rb.isKinematic = true;
+			rb.velocity = Vector2.zero;
 		}
 		else
 		{
@@ -59,7 +62,11 @@ public class DungeonMap : MonoBehaviour
 		{
 			var stRoom = node.Current.Value;
 
-			m_liRoom[nIndex].SetData(stRoom, 0, 0);
+			// UI_Room간 간격은 유니티 상의 100차이
+			// 대충 한 -400, -500정도 한 위치로 그리기 위함
+			// 맵 생성시 최대좌표만 기억하면 얼추 정확하게 그릴 수 있음
+
+			m_liRoom[nIndex].SetData(stRoom, -400, -500);
 			m_liRoom[nIndex].gameObject.SetActive(true);
 
 			++nIndex;

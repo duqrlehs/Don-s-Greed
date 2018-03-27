@@ -41,6 +41,8 @@ public class Room : IFixedUpdate
 		string strPrefabName = string.Format("Rooms/Room_{0:000}", m_stRoomData.nRoomID);
 
 		m_objRoom = a_objRoot.Instantiate_asChild(strPrefabName);
+		m_objRoom.name = string.Format("{0}_{1}_{2}", m_objRoom.name, a_stRoom.nX, a_stRoom.nY);
+
 		m_refRoom = m_objRoom.GetComponent<RoomInfo>();
 		m_refRoom.SetData(m_stRoomData);
 		
@@ -49,10 +51,7 @@ public class Room : IFixedUpdate
 
 	public void SetVisible(bool a_bVisible)
 	{
-		if( m_objRoom.activeSelf != a_bVisible )
-		{
-			m_objRoom.SetActive(a_bVisible);
-		}
+		m_refRoom.SetVisible(a_bVisible);
 	}
 
 	public void DoFixedUpdate(float a_fDeltaTime)

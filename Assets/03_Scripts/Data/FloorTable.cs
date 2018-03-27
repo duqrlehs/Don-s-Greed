@@ -38,7 +38,7 @@ public static class FloorTable
 	{
 		FloorData data = null;
 
-		data = new FloorData(1, 18, true, true, 0, (int)eNPC.Waepon);
+		data = new FloorData(1, 15, true, true, 0, (int)eNPC.Waepon);
 		m_mapFloor.Add(data.nID, data);
 		
 		data = new FloorData(2, 12, true, true, 0, (int)eNPC.SkillPoint);

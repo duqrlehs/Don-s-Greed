@@ -18,6 +18,8 @@ public class PlayerDungeon : Player
 
 	public void FixedUpdate_InDungeon()
 	{
+		if (this.m_rb.isKinematic == true) { return; }
+
 		if (Input.GetAxis("Vertical") < 0 && Input.GetButton("Jump"))
 		{
 			var pos = transform.localPosition;
@@ -71,6 +73,8 @@ public class PlayerDungeon : Player
 
 	public void OnTriggerEnter2D_InDungeon(Collider2D collision)
 	{
+		if( this.m_rb.isKinematic == true ) { return; }
+
 		InteractionObj obj = collision.gameObject.GetComponent<InteractionObj>();
 
 		if (obj == null)
@@ -83,5 +87,6 @@ public class PlayerDungeon : Player
 
 	public void OnCollisionEnter2D_InDungeon(Collision2D collision)
 	{
+		if (this.m_rb.isKinematic == true) { return; }
 	}
 }
